@@ -1,0 +1,12 @@
+specVersion: "v1beta"
+serviceId: "time-tracking-app"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "time-tracking-app-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

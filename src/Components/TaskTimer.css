@@ -1,0 +1,164 @@
+/* Parent container for the Practice component */
+.tasktimer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Card container for time tracking */
+.tasktimer-container .tasktimer-card {
+    position: fixed; /* Fixed position */
+    top: 20px; /* Fix it 20px from the top of the screen */
+    right: 20px; /* Fix it 20px from the right side of the screen */
+    z-index: 100;
+    width: 300px; /* Set a fixed width */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+/* Card hover effect */
+.tasktimer-container .tasktimer-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Input field for task name */
+.tasktimer-container .tasktimer-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Start/Stop button container */
+.tasktimer-container .tasktimer-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Start/Stop button styling */
+.tasktimer-container .tasktimer-startButton,
+.tasktimer-container .tasktimer-stopButton {
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.tasktimer-container .tasktimer-startButton {
+    background-color: #1890ff;
+}
+
+.tasktimer-container .tasktimer-startButton:hover {
+    background-color: #40a9ff;
+}
+
+.tasktimer-container .tasktimer-stopButton {
+    background-color: #ff4d4f;
+}
+
+.tasktimer-container .tasktimer-stopButton:hover {
+    background-color: #ff7875;
+}
+
+/* Elapsed time display */
+.tasktimer-container .tasktimer-elapsed-time {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Task history */
+.tasktimer-container .tasktimer-history-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.tasktimer-container .tasktimer-history-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.tasktimer-container .tasktimer-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tasktimer-container .tasktimer-history-table th,
+.tasktimer-container .tasktimer-history-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tasktimer-container .tasktimer-history-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.tasktimer-container .tasktimer-history-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Modal styling */
+.tasktimer-container .tasktimer-modal .ant-modal-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tasktimer-container .tasktimer-modal .ant-modal-content {
+    border-radius: 10px;
+}
+
+.tasktimer-container .tasktimer-modal .ant-modal-footer .ant-btn {
+    width: 120px;
+    height: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tasktimer-container .tasktimer-card {
+        width: 90%;
+        padding: 20px;
+        right: auto;
+        left: 5%;
+    }
+
+    .tasktimer-container .tasktimer-input,
+    .tasktimer-container .tasktimer-startButton,
+    .tasktimer-container .tasktimer-stopButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .tasktimer-container .tasktimer-elapsed-time {
+        font-size: 18px;
+    }
+
+    .tasktimer-container .tasktimer-history-table th,
+    .tasktimer-container .tasktimer-history-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
